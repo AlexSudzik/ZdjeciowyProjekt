@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.CheckBox
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 
@@ -13,10 +14,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var CheckBox = findViewById(R.id.checkBox1) as CheckBox
+        var nastepne = findViewById(R.id.nastepne) as ImageButton
+        var poprzednie = findViewById(R.id.poprzednie) as ImageButton
         var Doge = findViewById(R.id.Doge) as ImageView
 
-        CheckBox.setOnClickListener{
-            val checkBoxState: Boolean = CheckBox.isChecked()
+        var obraz: Int = 0
+        var terazObraz: Int = 0
+
+            CheckBox.setOnClickListener{
+            //val checkBoxState: Boolean = CheckBox.isChecked()
             if(CheckBox.isChecked()){
                 //val toast = Toast.makeText(applicationContext, "jest", Toast.LENGTH_SHORT)
                 //toast.show()
@@ -29,7 +35,46 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+        nastepne.setOnClickListener{
+        terazObraz = obraz
+            if(terazObraz == 0){
+                Doge.setImageResource(R.drawable.dog2)
+                obraz = 1
+            }
+            if(terazObraz == 1){
+                Doge.setImageResource(R.drawable.dog3)
+                obraz = 2
+            }
+            if(terazObraz == 2){
+                Doge.setImageResource(R.drawable.dog4)
+                obraz = 3
+            }
+            if(terazObraz == 3){
+                Doge.setImageResource(R.drawable.dog1)
+                obraz = 0
+            }
 
+        }
+        poprzednie.setOnClickListener {
+        terazObraz = obraz
+            if(terazObraz == 0){
+                Doge.setImageResource(R.drawable.dog4)
+                obraz = 3
+            }
+            if(terazObraz == 3){
+                Doge.setImageResource(R.drawable.dog3)
+                obraz = 2
+            }
+            if(terazObraz == 2){
+                Doge.setImageResource(R.drawable.dog2)
+                obraz = 1
+            }
+            if(terazObraz == 1){
+                Doge.setImageResource(R.drawable.dog1)
+                obraz = 0
+            }
+
+        }
 
 
 

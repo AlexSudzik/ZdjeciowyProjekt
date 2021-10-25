@@ -36,4 +36,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Doge" />
 
+    <ImageButton
+        android:id="@+id/nastepne"
+        android:layout_width="124dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1"
+        app:srcCompat="@drawable/nastepne" />
+
+    <ImageButton
+        android:id="@+id/poprzednie"
+        android:layout_width="110dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1"
+        app:srcCompat="@drawable/poprzednie" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
