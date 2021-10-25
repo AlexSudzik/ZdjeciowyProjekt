@@ -3,10 +3,7 @@ package com.example.projekt124
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.CheckBox
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +14,10 @@ class MainActivity : AppCompatActivity() {
         var nastepne = findViewById(R.id.nastepne) as ImageButton
         var poprzednie = findViewById(R.id.poprzednie) as ImageButton
         var Doge = findViewById(R.id.Doge) as ImageView
+        var Obracanie = findViewById(R.id.Obracanie) as Button
+        var ObracanieText = findViewById(R.id.ObracanieText) as TextView
 
+        var obracanieint: Int = 0
         var obraz: Int = 0
         var terazObraz: Int = 0
 
@@ -73,6 +73,13 @@ class MainActivity : AppCompatActivity() {
                 Doge.setImageResource(R.drawable.dog1)
                 obraz = 0
             }
+
+        }
+        Obracanie.setOnClickListener{
+            //obracanieint = ObracanieText
+            //Doge.setRotation(obracanieint)
+
+
 
         }
 

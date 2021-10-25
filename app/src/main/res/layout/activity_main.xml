@@ -56,4 +56,25 @@
         app:layout_constraintTop_toBottomOf="@+id/checkBox1"
         app:srcCompat="@drawable/poprzednie" />
 
+    <EditText
+        android:id="@+id/ObracanieText"
+        android:layout_width="147dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poprzednie" />
+
+    <Button
+        android:id="@+id/Obracanie"
+        android:layout_width="88dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:text="obróć"
+        app:layout_constraintStart_toEndOf="@+id/ObracanieText"
+        app:layout_constraintTop_toBottomOf="@+id/nastepne" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
