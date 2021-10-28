@@ -58,8 +58,8 @@
 
     <EditText
         android:id="@+id/ObracanieText"
-        android:layout_width="147dp"
-        android:layout_height="33dp"
+        android:layout_width="149dp"
+        android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:ems="10"
@@ -71,10 +71,31 @@
         android:id="@+id/Obracanie"
         android:layout_width="88dp"
         android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="obróć"
         app:layout_constraintStart_toEndOf="@+id/ObracanieText"
         app:layout_constraintTop_toBottomOf="@+id/nastepne" />
+
+    <EditText
+        android:id="@+id/ResizeText"
+        android:layout_width="148dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ObracanieText" />
+
+    <Button
+        android:id="@+id/Resize"
+        android:layout_width="87dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:text="Resize"
+        app:layout_constraintStart_toEndOf="@+id/ResizeText"
+        app:layout_constraintTop_toBottomOf="@+id/Obracanie" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

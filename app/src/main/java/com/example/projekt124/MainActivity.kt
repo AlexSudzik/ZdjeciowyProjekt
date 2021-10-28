@@ -1,5 +1,6 @@
 package com.example.projekt124
 
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity() {
         var Doge = findViewById(R.id.Doge) as ImageView
         var Obracanie = findViewById(R.id.Obracanie) as Button
         var ObracanieText = findViewById(R.id.ObracanieText) as TextView
+        var Resize = findViewById(R.id.Resize) as Button
+        var ResizeText = findViewById(R.id.ResizeText) as TextView
+
+        lateinit var mYourBitmap: Bitmap
 
         var obracanieint: Int = 0
         var obraz: Int = 0
@@ -76,13 +81,25 @@ class MainActivity : AppCompatActivity() {
 
         }
         Obracanie.setOnClickListener{
-            //obracanieint = ObracanieText
-            //Doge.setRotation(obracanieint)
 
-
-
+            var x = Integer.parseInt(ObracanieText.getText().toString());
+                Doge.setRotation(x.toFloat())
         }
 
+        Resize.setOnClickListener {
+        Toast.makeText(this@MainActivity, "Nie dziala", Toast.LENGTH_SHORT).show()
+        /*
+            val resized = Bitmap.createScaledBitmap(mYourBitmap, 300, 300, true)
+            Doge.setImageBitmap(resized)
+
+
+
+            var y = Integer.parseInt(ResizeText.getText().toString());
+            Doge.layoutParams = LinearLayout.LayoutParams(y,y)
+
+
+        */
+        }
 
 
 
